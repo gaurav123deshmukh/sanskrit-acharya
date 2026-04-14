@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitemap - Sanskrit Acharya</title>
-    <meta name="description" content="Sitemap for Sanskrit Acharya. Navigate through our courses, articles, and admission pages easily.">
+    <meta name="description" content="Sitemap for Sanskrit Acharya. Navigate through our main pages easily.">
     
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -26,39 +26,43 @@
     
     <style>
         .sitemap-section {
-            padding: 120px 10% 80px;
+            padding: 140px 10% 100px;
             min-height: 70vh;
+            text-align: center;
         }
-        .sitemap-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-        .sitemap-column h3 {
-            font-family: 'Cinzel', serif;
-            color: #d35400;
-            border-bottom: 2px solid #FED8B1;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+        .sitemap-container {
+            max-width: 600px;
+            margin: 50px auto 0;
+            text-align: left;
+            background: rgba(254, 216, 177, 0.1); /* Subtle #FED8B1 tint */
+            padding: 40px;
+            border-radius: 15px;
+            border-left: 5px solid #d35400;
         }
         .sitemap-list {
             list-style: none;
             padding: 0;
         }
         .sitemap-list li {
-            margin-bottom: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .sitemap-list li:last-child {
+            border-bottom: none;
         }
         .sitemap-list a {
             text-decoration: none;
             color: #333;
             font-family: 'Montserrat', sans-serif;
-            transition: color 0.3s ease;
-            display: inline-block;
+            font-size: 1.3rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: block;
         }
         .sitemap-list a:hover {
             color: #d35400;
-            transform: translateX(5px);
+            transform: translateX(10px);
         }
     </style>
 </head>
@@ -81,46 +85,22 @@
     </nav>
 
     <section class="sitemap-section">
-        <h1 class="section-title reveal gradient-text" style="text-align: left;">Sitemap</h1>
-        <p class="reveal delay-1">Explore all the sections of Sanskrit Acharya's digital home.</p>
+        <h1 class="section-title reveal gradient-text">Sitemap</h1>
+        <p class="reveal delay-1">Quick access to all main sections of our website.</p>
 
-        <div class="sitemap-grid">
-            <div class="sitemap-column reveal delay-1">
-                <h3>Main Navigation</h3>
-                <ul class="sitemap-list">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="courses">All Courses</a></li>
-                    <li><a href="articles">Latest Articles</a></li>
-                    <li><a href="about">About Us</a></li>
-                    <li><a href="contact">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <div class="sitemap-column reveal delay-2">
-                <h3>Our Programs</h3>
-                <ul class="sitemap-list">
-                    <li><a href="courses#spoken">Spoken Sanskrit</a></li>
-                    <li><a href="courses#academic">Academic Tutoring</a></li>
-                    <li><a href="courses#shloka">Shloka & Mantra Chanting</a></li>
-                </ul>
-            </div>
-
-            <div class="sitemap-column reveal delay-3">
-                <h3>Helpful Links</h3>
-                <ul class="sitemap-list">
-                    <li><a href="contact#enroll-form">Admission Inquiry</a></li>
-                    <li><a href="thankyou">Thank You Page</a></li>
-                    <li><a href="https://wa.me/917506113381" target="_blank">Direct WhatsApp Support</a></li>
-                </ul>
-            </div>
+        <div class="sitemap-container reveal delay-2">
+            <ul class="sitemap-list">
+                <li><a href="/">Home</a></li>
+                <li><a href="courses">Our Courses</a></li>
+                <li><a href="articles">Articles & Blogs</a></li>
+                <li><a href="about">About Us</a></li>
+                <li><a href="contact">Contact & Admission</a></li>
+            </ul>
         </div>
     </section>
 
     <footer>
         <div class="footer-logo">संस्कृतं सरलम् | संस्कृतं सुलभम् | संस्कृतं समृद्धम् ||</div>
-        <div class="footer-contact-row">
-            <p><strong>Phone:</strong> <a href="tel:+917506113381">+91 7506113381</a> <span class="footer-separator">|</span> <strong>Email:</strong> <a href="mailto:sanskritacharyaclasses@gmail.com">sanskritacharyaclasses@gmail.com</a></p>
-        </div>
         <div class="footer-bottom">
             <p class="copyright">&copy; 2026 Sanskrit Acharya Online Classes.</p>
             <div class="powered-by"><span>Powered by</span><a href="https://gauravdeshmukh.co.in/" target="_blank"><img src="powredby.png" alt="Gauravv Digital"></a></div>
