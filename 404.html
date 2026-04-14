@@ -5,45 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Page Not Found | Sanskrit Acharya</title>
     
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MKS588RW');</script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NY73D03BZ2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NY73D03BZ2');
+    </script>
+
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
     <style>
-        .error-section {
-            height: 85vh;
+        /* Specific alignment fixes for 404 */
+        .error-wrapper {
+            width: 100%;
+            min-height: 90vh;
             display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center;     /* Centers vertically */
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             text-align: center;
-            padding: 0 5%;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
         }
-        .error-code {
+
+        .error-content {
+            z-index: 2;
+        }
+
+        .huge-404 {
             font-family: 'Cinzel', serif;
-            font-size: 8rem;
-            line-height: 1;
+            font-size: clamp(5rem, 15vw, 10rem); /* Fluid sizing */
             color: #d35400;
-            margin-bottom: 10px;
-            opacity: 0.2;
+            opacity: 0.1;
             position: absolute;
-            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            width: 100%;
         }
+
         .error-title {
             font-family: 'Cinzel', serif;
             font-size: 2.5rem;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
+
         .error-message {
+            font-family: 'Montserrat', sans-serif;
             font-size: 1.1rem;
-            color: #666;
+            color: #555;
             max-width: 500px;
-            margin-bottom: 35px;
+            margin: 0 auto 30px;
             line-height: 1.6;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .btn-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .error-title {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
 <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKS588RW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
     <div class="cursor"></div>
     <div class="preloader" id="preloader"><div class="preloader-content">ॐ</div></div>
 
@@ -56,22 +103,32 @@
         </div>
     </nav>
 
-    <section class="error-section">
-        <div class="error-code reveal">404</div>
-        <h1 class="error-title reveal gradient-text">मार्गः न प्राप्तः</h1>
-        <h2 class="error-title reveal" style="font-size: 1.5rem; margin-top: -10px;">Page Not Found</h2>
-        <p class="error-message reveal delay-1">
-            The page you are looking for might have been removed or is temporarily unavailable.
-        </p>
-        <div class="reveal delay-2">
-            <a href="/" class="btn">Return Home</a>
+    <main class="error-wrapper">
+        <div class="huge-404">404</div>
+        
+        <div class="error-content">
+            <h1 class="error-title reveal gradient-text">मार्गः न प्राप्तः</h1>
+            <h2 class="error-title reveal" style="font-size: 1.4rem; color: #333;">Page Not Found</h2>
+            <p class="error-message reveal delay-1">
+                The path you are seeking does not exist on this server. Please return to the homepage to continue your journey.
+            </p>
+            <div class="btn-container reveal delay-2">
+                <a href="/" class="btn">Return Home</a>
+            </div>
         </div>
-    </section>
+    </main>
 
-    <footer>
+    <footer style="padding: 20px 0;">
         <div class="footer-bottom">
             <p class="copyright">&copy; 2026 Sanskrit Acharya Online Classes.</p>
         </div>
     </footer>
-    </body>
+
+    <script>
+        window.addEventListener('load',()=>setTimeout(()=>{document.getElementById('preloader').style.opacity='0';setTimeout(()=>document.getElementById('preloader').style.display='none',800)},1000));
+        const cursor=document.querySelector('.cursor');document.addEventListener('mousemove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px';});
+        const obs=new IntersectionObserver((e,o)=>e.forEach(i=>{if(i.isIntersecting){i.target.classList.add('active');o.unobserve(i.target);}}),{threshold:0.15});
+        document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+    </script>
+</body>
 </html>
