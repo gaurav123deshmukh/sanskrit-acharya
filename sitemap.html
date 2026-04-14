@@ -4,13 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitemap - Sanskrit Acharya</title>
-    <meta name="description" content="Sitemap for Sanskrit Acharya. Navigate through our main pages easily.">
-    
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MKS588RW');</script>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NY73D03BZ2"></script>
     <script>
@@ -21,75 +14,51 @@
     </script>
 
     <link rel="icon" type="image/png" href="favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
     <style>
-        .sitemap-wrapper {
+        .sitemap-layout {
             width: 100%;
-            min-height: 85vh;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             text-align: center;
-            padding: 120px 20px 60px;
-            box-sizing: border-box;
         }
 
-        .sitemap-container {
-            width: 100%;
-            max-width: 500px;
-            background: rgba(254, 216, 177, 0.1); /* Subtle #FED8B1 tint */
-            padding: 40px;
-            border-radius: 15px;
-            border-left: 5px solid #d35400;
-            text-align: left;
-            margin-top: 30px;
+        .sitemap-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            margin-bottom: 40px;
         }
 
-        .sitemap-list {
+        .sitemap-links {
             list-style: none;
             padding: 0;
             margin: 0;
         }
 
-        .sitemap-list li {
-            margin-bottom: 15px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+        .sitemap-links li {
+            margin: 15px 0;
         }
 
-        .sitemap-list li:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
-
-        .sitemap-list a {
+        .sitemap-links a {
             text-decoration: none;
             color: #333;
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             font-weight: 500;
-            transition: all 0.3s ease;
-            display: block;
+            transition: color 0.3s ease;
         }
 
-        .sitemap-list a:hover {
+        .sitemap-links a:hover {
             color: #d35400;
-            transform: translateX(10px);
-        }
-
-        .section-title {
-            font-family: 'Cinzel', serif;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKS588RW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
     <div class="cursor"></div>
     <div class="preloader" id="preloader"><div class="preloader-content">ॐ</div></div>
 
@@ -97,34 +66,20 @@
         <div class="logo"><a href="/"><img src="LOGOM.png" alt="Sanskrit Acharya Logo" class="nav-logo"></a></div>
         <div class="nav-links">
             <a href="/">Home</a>
-            <a href="courses">Courses</a>
-            <a href="articles">Articles</a>
-            <a href="about">About Us</a>
             <a href="contact">Contact</a>
         </div>
     </nav>
 
-    <main class="sitemap-wrapper">
-        <h1 class="section-title reveal gradient-text">Sitemap</h1>
-        <p class="reveal delay-1" style="font-family: 'Montserrat', sans-serif;">Navigate through the main sections of Sanskrit Acharya.</p>
-
-        <div class="sitemap-container reveal delay-2">
-            <ul class="sitemap-list">
-                <li><a href="/">Home</a></li>
-                <li><a href="courses">Our Courses</a></li>
-                <li><a href="articles">Articles & Blogs</a></li>
-                <li><a href="about">About Us</a></li>
-                <li><a href="contact">Contact & Admission</a></li>
-            </ul>
-        </div>
+    <main class="sitemap-layout">
+        <h1 class="sitemap-title reveal gradient-text">Sitemap</h1>
+        <ul class="sitemap-links reveal delay-1">
+            <li><a href="/">Home</a></li>
+            <li><a href="courses">Courses</a></li>
+            <li><a href="articles">Articles</a></li>
+            <li><a href="about">About Us</a></li>
+            <li><a href="contact">Contact</a></li>
+        </ul>
     </main>
-
-    <footer style="padding: 30px 0;">
-        <div class="footer-bottom">
-            <p class="copyright">&copy; 2026 Sanskrit Acharya Online Classes.</p>
-            <div class="powered-by"><span>Powered by</span><a href="https://gauravdeshmukh.co.in/" target="_blank"><img src="powredby.png" alt="Gauravv Digital"></a></div>
-        </div>
-    </footer>
 
     <script>
         window.addEventListener('load',()=>setTimeout(()=>{document.getElementById('preloader').style.opacity='0';setTimeout(()=>document.getElementById('preloader').style.display='none',800)},1000));
