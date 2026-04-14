@@ -315,3 +315,32 @@ footer { background: var(--theme-gradient); color: var(--text-light); text-align
         font-size: 2rem;
     }
 }
+/* Updated Section Wrapper */
+.section-padding {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: transparent; /* Removed the light grey background */
+}
+
+/* Updated Feature Boxes */
+.feature-box {
+    background: transparent; /* Removed the white background */
+    padding: 30px;
+    border-radius: 12px;
+    flex: 1 1 300px; 
+    transition: transform 0.3s ease;
+    /* Box-shadow removed for a clean transparent look */
+}
+
+/* Updated Course Cards */
+.board-card {
+    background: transparent; /* Removed the white background */
+    padding: 40px 30px;
+    border-radius: 12px;
+    border-top: 4px solid #d35400;
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Box-shadow removed for a clean transparent look */
+}
