@@ -140,3 +140,28 @@ footer { background: var(--theme-gradient); color: var(--text-light); text-align
     background: #333;
     color: #fff;
 }
+/* --- MOBILE RESPONSIVENESS FOR NEW SECTIONS --- */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 50px 5%;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .cta-banner h2 {
+        font-size: 1.8rem;
+    }
+    
+    /* Forces the boxes to stack vertically on small screens */
+    .features-grid, .courses-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-box, .board-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
