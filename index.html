@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanskrit Acharya - Premium Online Classes</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <div class="preloader" id="preloader"><div class="preloader-content">ॐ</div></div>
+    <a href="https://wa.me/917506113381" class="whatsapp-float" target="_blank"><img src="Wa.png" alt="WhatsApp"></a>
+
+    <nav>
+        <div class="logo"><a href="/"><img src="LOGOM.png" alt="Sanskrit Acharya Logo" class="nav-logo"></a></div>
+        <div class="menu-toggle" id="mobile-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        <div class="nav-links" id="nav-links">
+            <a href="/">Home</a>
+            <a href="courses">Courses</a>
+            <a href="articles">Articles</a>
+            <a href="about">About Us</a>
+            <a href="contact">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home">
+        <h1 class="hero-title reveal gradient-text">Sanskrit Acharya</h1>
+        <p class="hero-subtitle reveal delay-1">Online Classes</p>
+        <p class="sanskrit-quote reveal delay-2">संस्कृतं सरलम् | संस्कृतं सुलभम् | संस्कृतं समृद्धम् ||</p>
+        <p class="sub-text reveal delay-3">Learn Sanskrit in a Simple & Effective Way</p>
+        <a href="contact" class="btn reveal delay-3">Enroll Now - Limited Seats</a>
+    </section>
+
+    <footer>
+        <div class="footer-logo">संस्कृतं सरलम् | संस्कृतं सुलभम् | संस्कृतं समृद्धम् ||</div>
+        <div class="footer-contact-row"><p><strong>Phone / WhatsApp:</strong> <a href="tel:+917506113381">+91 7506113381</a> <span class="footer-separator">|</span> <strong>Email:</strong> <a href="mailto:sanskritacharyaclasses@gmail.com">sanskritacharyaclasses@gmail.com</a></p></div>
+        <div class="social-handles">
+            <a href="https://www.instagram.com/sanskritacharya/" target="_blank"><img src="insta.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/sanskritacharya" target="_blank"><img src="fb.png" alt="Facebook"></a>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2026 Sanskrit Acharya Online Classes.</p>
+            <div class="powered-by"><span>Powered by</span><a href="https://gauravdeshmukh.co.in/" target="_blank"><img src="powredby.png" alt="Gauravv Digital"></a></div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('load',()=>setTimeout(()=>{document.getElementById('preloader').style.opacity='0';setTimeout(()=>document.getElementById('preloader').style.display='none',800)},1000));
+        document.getElementById('mobile-menu').addEventListener('click',function(){document.getElementById('nav-links').classList.toggle('active');this.classList.toggle('is-active');});
+        const cursor=document.querySelector('.cursor');document.addEventListener('mousemove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px';});
+        document.querySelectorAll('a,.btn,.board-card,.feature-box,.article-card,.nav-logo,input,button,.menu-toggle').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('cursor-grow'));el.addEventListener('mouseleave',()=>cursor.classList.remove('cursor-grow'));});
+        window.addEventListener('scroll',()=>{document.querySelector('nav').classList.toggle('scrolled',window.scrollY>50);document.getElementById('scroll-progress').style.width=`${document.documentElement.scrollTop/(document.documentElement.scrollHeight-document.documentElement.clientHeight)*100}%`;});
+        const obs=new IntersectionObserver((e,o)=>e.forEach(i=>{if(i.isIntersecting){i.target.classList.add('active');o.unobserve(i.target);}}),{threshold:0.15});
+        document.querySelectorAll('.reveal').forEach(el=>obs.observe(el)); setTimeout(()=>document.querySelectorAll('.reveal').forEach(el=>el.classList.add('active')),1200);
+    </script>
+</body>
+</html>
