@@ -1,0 +1,11 @@
+# robots.txt for https://sanskritacharya.com/
+
+User-agent: *
+Allow: /
+
+# Sitemaps are crucial for SEO discovery
+Sitemap: https://sanskritacharya.com/sitemap.xml
+
+# Disallow specific technical or low-value paths
+Disallow: /404
+Disallow: /thankyou
