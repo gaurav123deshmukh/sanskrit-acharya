@@ -165,3 +165,153 @@ footer { background: var(--theme-gradient); color: var(--text-light); text-align
         max-width: 350px;
     }
 }
+/* =========================================
+   NEW HOMEPAGE SECTIONS (FEATURES & COURSES)
+   ========================================= */
+
+.section-padding {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: #fcfcfc; /* Light background to make white cards pop */
+}
+
+.section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Grids for Features and Courses */
+.features-grid, .courses-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Feature Boxes */
+.feature-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    flex: 1 1 300px; /* Makes them resize automatically */
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+.feature-box h3 {
+    color: #d35400; /* Warm saffron/orange color */
+    margin-bottom: 15px;
+    font-family: 'Cinzel', serif;
+}
+
+/* Course Cards */
+.board-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    border-top: 4px solid #d35400;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.board-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-family: 'Cinzel', serif;
+}
+
+.board-card p {
+    margin-bottom: 25px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Outline Button for Course Cards */
+.outline-btn {
+    background: transparent;
+    color: #d35400;
+    border: 2px solid #d35400;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.outline-btn:hover {
+    background: #d35400;
+    color: #fff;
+}
+
+/* =========================================
+   CALL TO ACTION BANNER
+   ========================================= */
+.cta-banner {
+    background: linear-gradient(135deg, #d35400, #e67e22);
+    color: #fff;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.cta-banner h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.cta-banner p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.cta-banner .btn:hover {
+    background: #fff !important;
+    color: #d35400 !important;
+    border-color: #fff !important;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS FIXES
+   ========================================= */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 50px 5%;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .features-grid, .courses-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .feature-box, .board-card {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .cta-banner {
+        padding: 60px 5%;
+    }
+    
+    .cta-banner h2 {
+        font-size: 2rem;
+    }
+}
