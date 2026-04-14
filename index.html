@@ -76,7 +76,7 @@
         <p class="hero-subtitle reveal delay-1">Online Classes</p>
         <p class="sanskrit-quote reveal delay-2">संस्कृतं सरलम् | संस्कृतं सुलभम् | संस्कृतं समृद्धम् ||</p>
         <p class="sub-text reveal delay-3">Learn Sanskrit in a Simple & Effective Way</p>
-        <a href="contact" class="btn reveal delay-3">Enroll Now - Limited Seats</a>
+        <a href="#enroll-form" class="btn reveal delay-3">Enroll Now - Limited Seats</a>
     </section>
 
     <section id="features" class="section-padding">
@@ -118,6 +118,22 @@
         </div>
     </section>
 
+    <section id="enroll-form" class="section-padding">
+        <h2 class="section-title reveal">Inquire for Admission</h2>
+        <div class="contact-container" style="max-width: 600px; margin: 0 auto;">
+            <div class="contact-info reveal">
+                <form action="https://api.sheetmonkey.io/form/qmXweUXkB2ggSEeJdYAbG1" method="POST" class="contact-form">
+                    <input type="hidden" name="x-sheetmonkey-redirect" value="https://sanskritacharya.com/thankyou">
+                    <input type="text" name="Name" placeholder="Full Name" required>
+                    <input type="text" name="Standard" placeholder="Standard / Course" required>
+                    <input type="tel" name="Contact_Number" placeholder="Contact Number" required>
+                    <input type="text" name="City" placeholder="City" required>
+                    <button type="submit" class="btn submit-btn" style="width: 100%;">Submit Details</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="footer-logo">संस्कृतं सरलम् | संस्कृतं सुलभम् | संस्कृतं समृद्धम् ||</div>
         <div class="footer-contact-row"><p><strong>Phone / WhatsApp:</strong> <a href="tel:+917506113381">+91 7506113381</a> <span class="footer-separator">|</span> <strong>Email:</strong> <a href="mailto:sanskritacharyaclasses@gmail.com">sanskritacharyaclasses@gmail.com</a></p></div>
@@ -137,6 +153,15 @@
         const cursor=document.querySelector('.cursor');document.addEventListener('mousemove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px';});
         document.querySelectorAll('a,.btn,.board-card,.feature-box,.article-card,.nav-logo,input,button,.menu-toggle').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('cursor-grow'));el.addEventListener('mouseleave',()=>cursor.classList.remove('cursor-grow'));});
         window.addEventListener('scroll',()=>{document.querySelector('nav').classList.toggle('scrolled',window.scrollY>50);document.getElementById('scroll-progress').style.width=`${document.documentElement.scrollTop/(document.documentElement.scrollHeight-document.documentElement.clientHeight)*100}%`;});
+        
+        // SMOOTH SCROLL FOR ENROLL NOW BUTTON
+        document.querySelector('a[href="#enroll-form"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
         const obs=new IntersectionObserver((e,o)=>e.forEach(i=>{if(i.isIntersecting){i.target.classList.add('active');o.unobserve(i.target);}}),{threshold:0.15});
         document.querySelectorAll('.reveal').forEach(el=>obs.observe(el)); setTimeout(()=>document.querySelectorAll('.reveal').forEach(el=>el.classList.add('active')),1200);
     </script>
